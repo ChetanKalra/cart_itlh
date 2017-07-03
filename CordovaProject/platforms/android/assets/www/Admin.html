@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline' http://fonts.googleapis.com; font-src 'self' http://fonts.gstatic.com data:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; media-src * ;img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>Admin Panel</title>
+	<link rel="stylesheet" type="text/css" href="css/style_admin.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link href="styles/font-awesome.css" rel="stylesheet" type="text/css">
+	<link href="styles/animate.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+<div class="row outer">
+	<div class="row inner">
+
+		<div class="clearfix parent-div">
+			<a data-toggle="modal" data-target="#myModal"><div class="col-md-4 col-sm-6 col-xs-12 section table-parent">
+				<div class="item-overlay bottom"></div>
+				<h4 class="table-child"><i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;<p>ADD A PRODUCT</p></h4>
+			</div></a>
+
+			<a data-toggle="modal" data-target="#editModal" onclick="getproducts();"><div class="col-md-4 col-sm-6 col-xs-12 section table-parent">
+				<div class="item-overlay bottom"></div>
+				<h4 class="table-child"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;<p>EDIT A PRODUCT</p></h4>
+			</div></a>
+
+			<a data-toggle="modal" data-target="#removeModal"><div class="col-md-4 col-sm-6 col-xs-12 section table-parent">
+				<div class="item-overlay bottom"></div>
+				<h4 class="table-child"><i class="fa fa-minus-circle" aria-hidden="true"></i>&nbsp;<p>REMOVE A PRODUCT</p></h4>
+			</div></a>
+
+			<a data-toggle="modal" data-target="#usersModal" onclick="getlist();"><div class="col-md-4 col-sm-6 col-xs-12 section table-parent">
+				<div class="item-overlay bottom"></div>
+				<h4 class="table-child"><i class="fa fa-bars" aria-hidden="true"></i>&nbsp;<p>USER'S LIST</p></h4>
+			</div></a>
+		
+			<a data-toggle="modal" data-target="#ordersModal" onclick="getorders();"><div class="col-md-4 col-sm-6 col-xs-12 section table-parent">
+				<div class="item-overlay bottom"></div>
+				<h4 class="table-child"><i class="fa fa-sort" aria-hidden="true"></i>&nbsp;<p>ORDERS</p></h4>
+			</div></a>
+
+			<a onclick="logout();"><div class="col-md-4 col-sm-6 col-xs-12 section table-parent">
+				<div class="item-overlay bottom"></div>
+				<h4 class="table-child"><i class="fa fa-power-off" aria-hidden="true"></i>&nbsp;<p>LOGOUT</p></h4>
+			</div></a>
+		
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h4 class="modal-title" id="AddProduct">Enter Product Details</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+     
+      <div class="modal-body">
+        
+
+
+        	<input type="text" placeholder="Product Title" class="form-control custom-input add-input" id="add-title">
+
+
+        	<input type="text" placeholder="Price" class="form-control custom-input add-input" id="add-price">
+
+
+        	<input type="text" placeholder="Quantity" class="form-control custom-input add-input" id="add-count">
+
+        	<select class="form-control margin-bottom-15 custom-select" id="add-category">
+        		<option value="1">Running</option>
+        		<option value="2">Football</option>
+        		<option value="3">Lifestyle</option>
+        	</select>
+
+        	<textarea class="form-control custom-textarea" placeholder="Description" id="add-description" width="100%" style="height: 100px;"></textarea>
+        	
+          <!-- <p class="image_url_text">Image: </p>
+        	<input type="file" id="add-image" class="form-control"> -->
+
+          <label for="file-upload" class="custom-file-upload">
+            <i class="fa fa-cloud-upload"></i>
+            Upload Image
+          </label>
+          <span id="file-selected"></span>
+          <input type="file" id="file-upload">
+
+
+      </div>
+     
+      <div class="modal-footer custom-footer">
+        <!-- <button type="button" class="btn custom-btn" data-dismiss="modal">Close</button> -->
+        <button type="button" class="btn custom-btn" onclick="add();">Add</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h4 class="modal-title" id="Remove-title">Remove</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+        
+        	<input type="text" placeholder="Product Title" name="p-title" class="form-control custom-input" id="p-title">
+        
+      </div>
+
+      <div class="modal-footer custom-footer">
+        <!-- <button type="button" class="btn custom-btn" data-dismiss="modal">Close</button> -->
+        <button type="button" class="btn custom-btn" onclick="remove();">Remove</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="usersModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h4 class="modal-title" id="Remove-title">Users</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+        
+          <div class="row" id="userlisttablehead">
+
+            <div class="col-md-1 col-sm-1">
+              <h5>No</h5>
+            </div>
+
+            <div class="col-md-3 col-sm-3">
+              <h5>Name</h5>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+              <h5>Email</h5>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+              <h5>Joining Date</h5>
+            </div>
+          </div>
+          
+          <div class="row listrowscroll" id="listrowscroll">
+            <!-- Dynamic Data -->
+          </div>
+
+
+          </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="ordersModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h4 class="modal-title" id="Remove-title">Orders</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+        
+          <div class="row" id="userlisttablehead">
+
+            <div class="col-md-2 col-sm-2">
+              <h5>User ID</h5>
+            </div>
+
+            <div class="col-md-2 col-sm-2">
+              <h5>Product ID</h5>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+              <h5>Status</h5>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+              <h5>Order Date</h5>
+            </div>
+          </div>
+          
+          <div class="row listrowscroll" id="ordersrowscroll">
+            <!-- Dynamic Data -->
+          </div>
+
+
+          </div>
+      </div>
+
+      <!-- <div class="modal-footer custom-footer">
+        <button type="button" class="btn custom-btn" data-dismiss="modal">Close</button>
+      </div> -->
+    </div>
+  </div>
+
+
+
+  
+  
+  <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h4 class="modal-title" id="Remove-title">Edit</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+        
+          <div class="row listrowscroll" id="productsrow">
+
+          </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="editdetailsmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h4 class="modal-title" id="AddProduct">Edit Product Details</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+     
+      <div class="modal-body">
+        
+
+
+          <input type="text" placeholder="Product Title" class="form-control custom-input add-input" id="edit-title">
+
+
+          <input type="text" placeholder="Price" class="form-control custom-input add-input" id="edit-price">
+
+
+          <input type="text" placeholder="Quantity" class="form-control custom-input add-input" id="edit-count">
+
+          <select class="form-control margin-bottom-15 custom-select" id="edit-category">
+            <option value="1">Running</option>
+            <option value="2">Football</option>
+            <option value="3">Lifestyle</option>
+          </select>
+
+          <textarea class="form-control custom-textarea" placeholder="Description" id="edit-description" width="100%" style="height: 100px;"></textarea>
+          
+          <!-- <p class="image_url_text">Image: </p>
+          <input type="file" id="edit-image" class="form-control"> -->
+
+          <label for="file-upload-edit" class="custom-file-upload">
+            <i class="fa fa-cloud-upload"></i>
+            Upload Image
+          </label>
+          <span id="file-selected-edit"></span>
+          <input type="file" id="file-upload-edit">
+
+
+
+      </div>
+     
+      <div class="modal-footer custom-footer">
+        <!-- <button type="button" class="btn custom-btn" data-dismiss="modal">Close</button> -->
+        <button type="button" id="editbtn" class="btn custom-btn" onclick="">Edit</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/Admin.js"></script>
+</html>

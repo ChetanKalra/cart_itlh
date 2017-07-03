@@ -1,0 +1,310 @@
+body{
+	/*background: #e4e4e4;*/
+	background: url('../img/Slider1.jpg');
+	background-size: cover;
+}
+
+.section{
+	background: rgba(255, 255, 255, 0.69);
+	height: 200px;
+	border: 1px solid #000;
+}
+
+.outer{
+	display: table;
+	width: 100%;
+	height: 100vh;
+}
+
+.inner{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.parent-div{
+	margin: 0 auto;
+	width: 82%;
+}
+
+.table-parent{
+	display: table;
+}
+
+.table-child{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.section:hover{
+	color: #ececeb;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+
+.table-child .fa{
+	padding-right: 6px !important;
+}
+
+.section:hover .item-overlay.bottom {
+  bottom: 0;
+}
+
+.item-overlay {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  
+  background: rgba(0,0,0,0.5);
+  overflow: hidden;
+  width: 100%; 
+  
+  -moz-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+  -webkit-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+  transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+}
+
+.item-overlay.bottom {
+  bottom: 100%;
+}
+
+.table-child p{
+	display: inline-block;
+    text-rendering: auto;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}
+
+a{
+	text-decoration: none;
+	color: #333 !important;
+}
+
+#Remove-title{
+	display: inline-block;
+	line-height: 0;
+}
+
+.btn.custom-btn{
+	border-radius: 0px !important;
+}
+
+.form-control.custom-input{
+	border-radius: 0px !important;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    border-top: none;
+    padding-left: 15px;
+    box-shadow: none;
+    background: #ececeb;
+}
+
+.form-control.custom-input:focus{
+	box-shadow: none;
+    border-bottom-color: #000;
+}
+
+.modal-footer.custom-footer{
+	border-top: none !important;
+}
+
+.modal-content{
+	border-radius: 0px !important;
+}
+
+.modal-body{
+	padding: 15px 0px !important;
+}
+
+#AddProduct{
+	display: inline-block;
+	line-height: 0;
+}
+
+input.add-input{
+	margin-bottom: 15px !important;
+}
+
+.margin-bottom-15{
+	margin-bottom: 15px !important;
+}
+
+#add-category, #edit-category{
+	border-radius: 0px !important;
+	color: #555 !important;
+	outline: none;
+	box-shadow: none;
+	border-right: none;
+    border-left: none;
+    border-top: none;
+    background: #ececeb;
+    padding-left: 12px;
+}
+
+#add-category:focus {
+    border-color: #000;
+}
+
+.form-control.custom-textarea{
+	border-radius: 0px !important;
+	padding: 10px 15px !important;
+	max-width: 100% !important;
+	box-shadow: none;
+	background: #ececeb;
+}
+
+.custom-textarea:focus{
+	border-color: #000 !important;
+	box-shadow: none !important;
+}
+
+
+@media screen and (max-width: 767px)
+{
+	.col-xs-12{
+		width: 100% !important;
+	}
+}
+
+#add-image, #edit-image{
+	padding-left: 15px;
+    border: none;
+    box-shadow: none;
+    float: left;
+    margin-top: -5px;
+    line-height: 0;
+    background: #ececeb;
+}
+
+.image_url_text{
+	padding-left: 15px;
+    display: inline-block;
+    margin-top: 15px;
+    color: #999;
+}
+
+#add-image:focus{
+	border: none;
+	box-shadow: none;
+	outline: none;
+}
+
+.userlisth6{
+	margin: 7px 7px 7px 0px!important;
+	word-wrap: break-word;
+}
+
+@media screen and (max-width: 767px)
+{
+	#userlisttablehead{
+		display: none !important;
+	}
+}
+
+.listrow{
+	border: 1px solid #ececeb;
+}
+
+.modal-body .listrow:last-child{
+	border-bottom: none;
+}
+
+.listrowscroll{
+	max-height: 80%;
+	overflow: auto;
+	height: calc(100vh - 220px);
+}
+
+@media screen and (max-width: 767px)
+{
+	.user_id_orders:before{
+		content: 'User ID: ';
+	}
+
+	.product_id_orders:before{
+		content: 'Product ID: ';
+	}
+
+	.status_orders:before{
+		content: 'Status: ';
+	}
+
+	.date_orders:before{
+		content: 'Order Date: ';
+	}
+
+	.user_no:before{
+		content: 'Sr No: ';
+	}
+
+	.user_name:before{
+		content: 'Name: ';
+	}
+
+	.user_email:before{
+		content: 'Email: ';
+	}
+
+	.user_date:before{
+		content: 'Joining Date: ';
+	}
+}
+
+.modal-product-title{
+	text-align: center;
+	margin-top: 10px !important;
+}
+
+.custom-modal-thumbnail{
+	padding: 0px 7px !important;
+}
+
+.custom-modal-thumbnail .thumbnail{
+	box-shadow: 0px 0px 3px #a6a6a6;
+	transition: all 0.4s;
+}
+
+
+.custom-modal-thumbnail .thumbnail:hover{
+	box-shadow: 0px 0px 3px #000;
+	transition: all 0.4s;
+	cursor: pointer;
+}
+
+#editModal .modal-body{
+	background: #ececeb;
+}
+
+
+.modal-body, .modal-footer{
+	background: #ececeb;
+}
+
+.close{
+	font-weight: normal !important;
+	opacity: 0.7 !important;
+	transition: 0.3s;
+}
+
+.close:hover{
+	transition: 0.3s !important;
+}
+
+#file-upload, #file-upload-edit{
+	position: absolute !important;
+	left: -9999rem !important;
+}
+
+.custom-file-upload{
+	border: 1px solid #ccc;
+	display: inline-block;
+	padding: 6px 12px;
+	cursor: pointer;
+	color: #999;
+    font-weight: 300;
+    margin-left: 15px;
+    margin-top: 15px;
+}

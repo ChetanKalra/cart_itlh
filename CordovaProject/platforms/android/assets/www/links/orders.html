@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline' http://fonts.googleapis.com; font-src 'self' http://fonts.gstatic.com data:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; media-src * ;img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="shortcut icon" href="images/splash/favicon.ico" type="image/x-icon" />
+
+    <title>Xtreme</title>
+
+    <link href="../styles/style.css" rel="stylesheet" type="text/css">
+    <link href="../styles/framework.css" rel="stylesheet" type="text/css">
+    <link href="../styles/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="../styles/animate.css" rel="stylesheet" type="text/css">
+    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="../scripts/jquery.js"></script>
+    <script type="text/javascript" src="../scripts/jqueryui.js"></script>
+    <script type="text/javascript" src="../scripts/framework-plugins.js"></script>
+    <script type="text/javascript" src="../scripts/custom.js"></script>
+</head>
+
+<body class="dual-sidebar">
+
+    <div id="preloader">
+        <div id="status">
+            <div class="preloader-logo"></div>
+            <h3 class="center-text">Welcome</h3>
+            <p class="center-text smaller-text">
+                We're loading the content, give us a second. This won't take long!
+            </p>
+        </div>
+    </div>
+
+    <div class="gallery-fix"></div>
+    <!-- Important for all pages that have galleries or portfolios -->
+
+    <div id="header-fixed" class="header-style-1">
+        <a class="header-1 open-left-sidebar" href="#" style="z-index: 2;"><i class="fa fa-navicon"></i></a>
+        <!-- <a class="header-logo" href="#"><img src="images/unnamed.png" alt="img"></a> -->
+        <a href="../dashboard.html" class="custom-logo"><img src="../images/Logo.png"></a>
+
+        <a class="header-2 open-right-sidebar" href="#"><i class="fa fa-envelope-o"></i></a>
+    </div>
+
+
+
+    <div class="all-elements">
+        <div class="snap-drawers">
+            <div class="snap-drawer snap-drawer-left">
+                <div class="sidebar-header-left">
+                    <!-- <a href="#"><img src="images/unnamed.png" alt="img"></a> -->
+                    <a class="close-sidebar" href="#"><i class="fa fa-times"></i></a>
+                </div>
+
+                <p class="sidebar-divider">Navigation</p>
+
+                <div class="sidebar-menu">
+                    <a class="menu-item" href="../dashboard.html">
+                        <i class="fa fa-home"></i>
+                        <em>Homepage</em>
+                        <i class="fa fa-circle"></i>
+                    </a>
+
+                    <div class="has-submenu">
+                        <a class="menu-item show-submenu" href="#">
+                            <i class="fa fa-picture-o"></i>
+                            <em>Products</em>
+                            <strong>3</strong>
+                        </a>
+                        <div class="submenu submenu-active">
+                            <a class="submenu-item" href="../productDetail.html?category=1"> <i class="fa fa-angle-right"></i><em>Running</em><i class="fa fa-circle"></i></a>
+                            <a class="submenu-item" href="../productDetail.html?category=3"> <i class="fa fa-angle-right"></i><em>Lifestyle</em><i class="fa fa-circle"></i></a>
+                            <a class="submenu-item" href="../productDetail.html?category=2"> <i class="fa fa-angle-right"></i><em>Football</em><i class="fa fa-circle"></i></a>
+
+
+                        </div>
+                    </div>
+
+                    <a class="menu-item" href="wishlist.html">
+                        <i class="fa fa-bars"></i>
+                        <em>Wishlist</em>
+                        <i class="fa fa-circle"></i>
+                    </a>
+
+                    <a class="menu-item" href="Cart.html">
+                        <i class="fa fa-shopping-cart"></i>
+                        <em>Cart</em>
+                        <i class="fa fa-circle"></i>
+                    </a>
+
+                    <a class="menu-item menu-item-active" href="orders.html">
+                        <i class="fa fa-history"></i>
+                        <em>Orders</em>
+                        <i class="fa fa-circle"></i>
+                    </a>
+
+                </div>
+
+                <p class="sidebar-footer">Copyright 2017. All rights reserved</p>
+
+            </div>
+
+            <!--Right Sidebar -->
+
+            <div class="snap-drawer snap-drawer-right">
+
+                <div class="sidebar-header-right">
+                    <a class="close-sidebar" href="#"><i class="fa fa-times"></i></a>
+                </div>
+
+               
+                <p class="sidebar-divider">Contact Us</p>
+
+                <div class="sidebar-menu">
+
+                    <a class="menu-item" href="mailto:chetankalra11@gmail.com?subject=Amazing Template">
+                        <i class="fa fa-envelope-o"></i>
+                        <em>Mail Us</em>
+                    </a>
+                </div>
+
+                <div class="Logout-btn menu-item">
+                    <i class="fa fa-power-off custom-power" aria-hidden="true"></i>
+                    <em onclick="logout();">Logout</em>
+                </div>
+
+                <p class="sidebar-footer">Copyright 2017. All rights reserved</p>
+
+            </div>
+
+
+            <div id="content" class="snap-content">
+                <div class="content">
+                    <div class="header-clear-large"></div>
+                    <!--Page content goes here, fixed elements go above the all elements class-->
+
+                    <div class="heading-style-1 container half-bottom clearfix">
+                        <!-- <a href="#"><i class="fa fa-image"></i></a> -->
+                        <h1 id="product-title" class="fl">Order History</h1>
+                        <!-- <button class="wishlist-btn" onclick="Checkout();" id="add-wl">Checkout</button>
+                         --><!-- <button class="wishlist-btn remove-btn" onclick="remove();" id="remove-wl">Remove from wishlist</button> -->
+                        <div class="heading-decoration bg-red-dark"></div>
+                    </div>
+                    <div class="container clearfix">
+                        <!-- <p class="fl">Customise your look with premium colours and personalised details.</p> -->
+                        <p class="total-p" id="total-p"></p>
+                    </div>
+
+                    <div class="decoration"></div>
+
+                    <div class="row" id="order-row" style="margin-bottom: 30px;">
+                       
+
+
+
+
+
+
+
+
+
+
+                    </div>
+
+                    <div class="decoration"></div>
+
+                    <!-- <div class="footer">
+                        <p class="center-text margin-0">Copyright 2017. All rights reserved.</p>
+                    </div> -->
+
+                </div>
+            </div>
+        </div>
+        <a href="#" class="back-to-top-badge"><i class="fa fa-caret-up"></i>Back to top</a>
+    </div>
+
+    <script type="text/javascript" src="../js/orders.js"></script>
+
+</body>

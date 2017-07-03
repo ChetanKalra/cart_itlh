@@ -1,0 +1,349 @@
+<!DOCTYPE HTML>
+
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline' http://fonts.googleapis.com; font-src 'self' http://fonts.gstatic.com data:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; media-src * ;img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <title>Xtreme</title>
+
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="styles/framework.css" rel="stylesheet" type="text/css">
+    <link href="styles/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="styles/animate.css" rel="stylesheet" type="text/css">
+
+
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/jqueryui.js"></script>
+    <script type="text/javascript" src="scripts/framework-plugins.js"></script>
+    <script type="text/javascript" src="scripts/custom.js"></script>
+    <script type="text/javascript" src="js/dashboard.js"></script>
+</head>
+
+<body class="dual-sidebar">
+
+    <div id="preloader">
+        <div id="status">
+            <div class="preloader-logo"></div>
+            <h3 class="center-text">Welcome</h3>
+            <p class="center-text smaller-text">
+                We're loading the content, give us a second. This won't take long!
+            </p>
+        </div>
+    </div>
+
+    <div class="gallery-fix"></div>
+    <!-- Important for all pages that have galleries or portfolios -->
+
+    <div id="header-fixed" class="header-style-1">
+        <a class="header-1 open-left-sidebar" href="#" style="z-index: 2;"><i class="fa fa-navicon"></i></a>
+        <!-- <a class="header-logo" href="#"><img src="images/unnamed.png" alt="img"></a> -->
+        <a href="dashboard.html" class="custom-logo"><img src="images/Logo.png"></a>
+
+        <a class="header-2 open-right-sidebar" href="#"><i class="fa fa-envelope-o"></i></a>
+    </div>
+
+
+    <div class="all-elements">
+        <div class="snap-drawers">
+            <div class="snap-drawer snap-drawer-left">
+                <div class="sidebar-header-left">
+                    <!-- <a href="#"><img src="images/unnamed.png" alt="img"></a> -->
+
+                    <a class="close-sidebar" href="#"><i class="fa fa-times"></i></a>
+                </div>
+
+                <p class="sidebar-divider">Navigation</p>
+
+                <div class="sidebar-menu">
+                    <a class="menu-item menu-item-active" href="dashboard.html">
+                        <i class="fa fa-home"></i>
+                        <em>Homepage</em>
+                        <i class="fa fa-circle"></i>
+                    </a>
+
+                    <div class="has-submenu">
+                        <a class="menu-item show-submenu" href="#">
+                            <i class="fa fa-picture-o"></i>
+                            <em>Products</em>
+                            <strong>3</strong>
+                        </a>
+                        <div class="submenu submenu-active">
+                            <a class="submenu-item" href="productDetail.html?category=1"> <i class="fa fa-angle-right"></i><em>Running</em><i class="fa fa-circle"></i></a>
+                            <a class="submenu-item" href="productDetail.html?category=3"> <i class="fa fa-angle-right"></i><em>Lifestyle</em><i class="fa fa-circle"></i></a>
+                            <a class="submenu-item" href="productDetail.html?category=2"> <i class="fa fa-angle-right"></i><em>Football</em><i class="fa fa-circle"></i></a>
+
+
+                        </div>
+                    </div>
+
+                    <a class="menu-item" href="links/wishlist.html">
+                        <i class="fa fa-bars"></i>
+                        <em>Wishlist</em>
+                        <i class="fa fa-circle"></i>
+                    </a>
+
+                    <a class="menu-item" href="links/Cart.html">
+                        <i class="fa fa-shopping-cart"></i>
+                        <em>Cart</em>
+                        <i class="fa fa-circle"></i>
+                    </a>
+
+                    <a class="menu-item" href="links/orders.html">
+                        <i class="fa fa-history"></i>
+                        <em>Orders</em>
+                        <i class="fa fa-circle"></i>
+                    </a>
+
+                </div>
+
+                <p class="sidebar-footer">Copyright 2017. All rights reserved</p>
+
+            </div>
+
+            <!--Right Sidebar -->
+
+            <div class="snap-drawer snap-drawer-right">
+
+                <div class="sidebar-header-right">
+                    <a class="close-sidebar" href="#"><i class="fa fa-times"></i></a>
+                </div>
+
+                <p class="sidebar-divider">Contact Us</p>
+
+                <div class="sidebar-menu">
+                    <a class="menu-item" href="mailto:chetankalra11@gmail.com?subject=Amazing Template">
+                        <i class="fa fa-envelope-o"></i>
+                        <em>Mail Us</em>
+                    </a>
+                </div>
+
+                <div class="Logout-btn menu-item">
+                    <i class="fa fa-power-off custom-power" aria-hidden="true"></i>
+                    <em onclick="logout();">Logout</em>
+                </div>
+
+                <p class="sidebar-footer">Copyright 2017. All rights reserved</p>
+
+            </div>
+
+
+            <div id="content" class="snap-content">
+                <div class="content">
+                    <div class="header-clear"></div>
+                    <!--Page content goes here, fixed elements go above the all elements class-->
+
+                    <!-- <div class="homepage-slider container-fullscreen">
+                        <div class="homepage-slider-transition" data-snap-ignore="true">
+                            <div class="homepage-slider-item">
+                                <h5 class="left-text">Welcome, stranger</h5>
+                                <p class="left-text">Swipe the image to begin.</p>
+                                <img src="images/pictures/4.jpg" alt="img">
+                                <div class="overlay bg-black"></div>
+                            </div>
+                            <div class="homepage-slider-item">
+                                <h5 class="center-text">This slider will contain goood images</h5>
+                                <p class="center-text">And they are just awesome!</p>
+                                <img src="images/pictures/5.jpg" alt="img">
+                                <div class="overlay bg-black"></div>
+                            </div>
+                            <div class="homepage-slider-item">
+                                <h5 class="right-text">and this one too</h5>
+                                <p class="right-text">This is a subtext!</p>
+                                <img src="images/pictures/6.jpg" alt="img">
+                                <div class="overlay bg-black"></div>
+                            </div>
+                        </div>
+                        <a href="#" class="next-home-slider"><i class="fa fa-angle-right"></i></a>
+                        <a href="#" class="prev-home-slider"><i class="fa fa-angle-left"></i></a>
+                    </div> -->
+
+                    <div class="container">
+                        <h4 class="catchy-line">GIVE THE GIFT OF <span>SPORT</span></h4>
+                        <p>
+                            Follow the journey as three world-class runners attempt to break the two-hour marathon barrier.
+                        </p>
+                    </div>
+
+                    <div class="decoration"></div>
+
+               <!--      <div class="container-fullscreen heading-style-3 bg-3">
+                        <h4 class="heading-title">What can it do?</h4>
+                        <em class="heading-subtitle">The power behind the beauty!</em>
+                        <div class="overlay bg-black"></div>
+                    </div>
+
+                    <div class="container-fullscreen">
+                        <div class="one-half-responsive">
+                            <p class="image-column-left">
+                                <img src="images/pictures/3s.jpg" alt="img">
+                                <strong>Mobile Ready</strong>
+                                <em>
+                                Pixel perfect designs are what we care about. Quality above all!
+                            </em>
+                            </p>
+                        </div>
+                        <div class="decoration hide-if-responsive"></div>
+                        <div class="one-half-responsive last-column">
+                            <p class="image-column-right">
+                                <img src="images/pictures/5s.jpg" alt="img">
+                                <strong>PhoneGap &amp; Cordova</strong>
+                                <em>
+                                Designed for use as a site template, built in mind for app developers!
+                            </em>
+                            </p>
+                        </div>
+                        <div class="decoration"></div>
+                        <div class="one-half-responsive">
+                            <p class="image-column-left">
+                                <img src="images/pictures/6s.jpg" alt="img">
+                                <strong>Elite Quality</strong>
+                                <em>
+                                We belive in quality, we became elite because of it! It's priceless!
+                            </em>
+                            </p>
+                        </div>
+                        <div class="decoration hide-if-responsive"></div>
+                        <div class="one-half-responsive last-column">
+                            <p class="image-column-right">
+                                <img src="images/pictures/8s.jpg" alt="img">
+                                <strong>Easy, just add water!</strong>
+                                <em>
+                                Things made as easy as possible! We want you not to stress it! 
+                            </em>
+                            </p>
+                        </div>
+                        <div class="decoration"></div>
+                    </div> -->
+
+                    <div class="container-fullscreen heading-style-3 bg-5">
+                        <h4 class="heading-title">Meet our Team!</h4>
+                        <!-- <em class="heading-subtitle">Get more from us, get social!</em> -->
+                        <div class="overlay bg-black"></div>
+                    </div>
+
+                    <div class="staff-slider">
+                        <div class="staff-slider-no-transition" data-snap-ignore="true">
+                            <div class="staff-item">
+                                <img class="scale-hover" src="images/Dev3.jpg" alt="img">
+                                <h3>Chetan Kalra</h3>
+                                <em class="color-red-dark">Professional Freelancer</em>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at imperdiet enim, ut laoreet dolor. Maecenas vitae nibh in sapien vehicula fermentum id vitae lorem.
+                                </p>
+                                <!-- <div class="staff-icons staff-icons-three">
+                                    <a class="social-ball facebook-color scale-hover" href="#"><i class="fa fa-facebook"></i></a>
+                                    <a class="social-ball phone-color scale-hover" href="#"><i class="fa fa-phone"></i></a>
+                                    <a class="social-ball twitter-color scale-hover" href="#"><i class="fa fa-twitter"></i></a>
+                                </div> -->
+                            </div>
+                            <div class="staff-item">
+                                <img class="scale-hover" src="images/Dev2.jpg" alt="img">
+                                <h3>Katherine Langford</h3>
+                                <em class="color-green-dark">Software Manager</em>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at imperdiet enim, ut laoreet dolor. Maecenas vitae nibh in sapien vehicula fermentum id vitae lorem.
+                                </p>
+                                <!-- <div class="staff-icons staff-icons-two">
+                                    <a class="social-ball phone-color scale-hover" href="#"><i class="fa fa-phone"></i></a>
+                                    <a class="social-ball twitter-color scale-hover" href="#"><i class="fa fa-twitter"></i></a>
+                                </div> -->
+                            </div>
+                            <div class="staff-item">
+                                <img class="scale-hover" src="images/Dev1.jpg" alt="img">
+                                <h3>Clay Jensen</h3>
+                                <em class="color-orange-dark">Support Staff</em>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at imperdiet enim, ut laoreet dolor. Maecenas vitae nibh in sapien vehicula fermentum id vitae lorem.
+                                </p>
+                                <!-- <div class="staff-icons staff-icons-one">
+                                    <a class="social-ball phone-color scale-hover" href="#"><i class="fa fa-phone"></i></a>
+                                </div> -->
+                            </div>
+                        </div>
+                        <a class="next-staff-slider" href="#"><i class="fa fa-angle-right"></i></a>
+                        <a class="prev-staff-slider" href="#"><i class="fa fa-angle-left"></i></a>
+                    </div>
+                    <div class="decoration"></div>
+
+                    <div class="container-fullscreen heading-style-3 bg-2">
+                        <h4 class="heading-title">What we Sell</h4>
+                        <!-- <em class="heading-subtitle">Products sold us!</em> -->
+                        <div class="overlay bg-black"></div>
+                    </div>
+
+                    <div class="container">
+                        <p style="font-size: 15px;">You can really innovate your dressing sense with few of our products.</p>
+                    </div>
+
+                    <div class="portfolio-filter">
+                        <div class="portfolio-filter-categories">
+                            <a href="#" class="filter-category selected-filter" data-rel="all-cat">All</a>
+                            <a href="#" class="filter-category" data-rel="cat1">Running</a>
+                            <a href="#" class="filter-category" data-rel="cat2">Football</a>
+                            <a href="#" class="filter-category" data-rel="cat3">Lifestyle</a>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="portfolio-filter-wrapper">
+                            <div class="cat1 all-cat gallery-filter-item">
+                                <a class="show-gallery-1" href="images/Product-Images/Running/AirMax.png">
+                                    <img src="images/Product-Images/Running/AirMax.png" class="responsive-image" alt="img">
+                                </a>
+                            </div>
+                            <div class="cat2 all-cat gallery-filter-item">
+                                <a class="show-gallery-2" href="images/Product-Images/Football/TiempoGenio.png">
+                                    <img src="images/Product-Images/Football/TiempoGenio.png" class="responsive-image" alt="img">
+                                </a>
+                            </div>
+                            <div class="cat3 all-cat gallery-filter-item">
+                                <a class="show-gallery-3" href="images/Product-Images/Lifestyle/RosheTwo.png">
+                                    <img src="images/Product-Images/Lifestyle/RosheTwo.png" class="responsive-image" alt="img">
+                                </a>
+                            </div>
+                            <div class="cat1 all-cat gallery-filter-item">
+                                <a class="show-gallery-1" href="images/Product-Images/Running/LunarEpic.png">
+                                    <img src="images/Product-Images/Running/LunarEpic.png" class="responsive-image" alt="img">
+                                </a>
+                            </div>
+                            <div class="cat2 all-cat gallery-filter-item">
+                                <a class="show-gallery-2" href="images/Product-Images/Football/MercurialX.png">
+                                    <img src="images/Product-Images/Football/MercurialX.png" class="responsive-image" alt="img">
+                                </a>
+                            </div>
+                            <div class="cat3 all-cat gallery-filter-item">
+                                <a class="show-gallery-3" href="images/Product-Images/Lifestyle/AquaSock.png">
+                                    <img src="images/Product-Images/Lifestyle/AquaSock.png" class="responsive-image" alt="img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="decoration"></div>
+
+                    <div class="footer">
+                        <p class="center-text">Copyright 2017. All rights reserved.</p>
+                        <!-- <div class="footer-icons">
+                            <a href="#" class="scale-hover facebook-color social-ball"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="scale-hover twitter-color social-ball"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="scale-hover google-color social-ball"><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="scale-hover back-to-top bg-green-dark social-ball"><i class="fa fa-angle-up"></i></a>
+                            <a href="#" class="scale-hover show-share-bottom bg-magenta-dark social-ball"><i class="fa fa-retweet"></i></a>
+                        </div> -->
+                    </div>
+
+
+
+                    <!-- End of entire page content-->
+                </div>
+            </div>
+        </div>
+        <a href="#" class="back-to-top-badge"><i class="fa fa-caret-up"></i>Back to top</a>
+    </div>
+
+</body>
+
+<script type="text/javascript" src="js/contact.js"></script>

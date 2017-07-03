@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline' http://fonts.googleapis.com; font-src 'self' http://fonts.gstatic.com data:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; media-src * ;img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- <link rel="stylesheet" type="text/css" href="css/index.css"> -->
+    
+    <title>Register</title>
+
+    <link href="../styles/style.css" rel="stylesheet" type="text/css">
+    <link href="../styles/framework.css" rel="stylesheet" type="text/css">
+    <link href="../styles/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="../styles/animate.css" rel="stylesheet" type="text/css">
+    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="../scripts/jquery.js"></script>
+    <script type="text/javascript" src="../scripts/jqueryui.js"></script>
+    <script type="text/javascript" src="../scripts/framework-plugins.js"></script>
+    <script type="text/javascript" src="../scripts/custom.js"></script>
+
+</head>
+
+<body class="dual-sidebar">
+
+    <div class="gallery-fix"></div>
+
+    <div class="all-elements">
+
+        <div class="snap-drawers">
+            <div id="content" class="snap-content">
+                <div class="header-clear"></div>
+               
+                <div class="pageapp-login bg-5 cover-screen">
+                    <div class="pageapp-login-content cover-center">
+                        <div class="unboxed-layout">
+                            
+                            <div class="row" style="text-align: center;">
+                                <img src="../images/logo1.png" id="organisation">
+                            </div>  
+                            
+                            <form autocomplete="off">
+
+                                <div class="pageapp-login-field">
+                                    <i class="fa fa-user"></i>
+                                    <input type="text" id="Name" placeholder="Name">
+                                </div>
+
+                                <div class="pageapp-login-field">
+                                    <i class="fa fa-user"></i>
+                                    <input type="text" id="Email" placeholder="Email">
+                                </div>
+                                
+                                <div class="pageapp-login-field">
+                                    <i class="fa fa-lock"></i>
+                                    <input type="password" id="Password" placeholder="Password">
+                                </div>
+
+                                <button type="submit" id="Register" class="pageapp-signup-button button button-green button-fullscreen">Sign Up</button>
+
+                                <div>
+                                    <p id="ErrorSignUp"></p>
+                                </div>
+
+                                <p class="OR-separator">OR</p>
+
+                            </form>
+
+                            <button type="submit" onclick="Login_link();" class="pageapp-signup-button button button-green button-fullscreen">Back to login</button>
+                            
+                        </div>
+                    </div>
+                    <div class="overlay bg-black "></div>
+                </div>
+
+            </div>
+        </div>
+        <!-- <a href="# " class="back-to-top-badge "><i class="fa fa-caret-up "></i>Back to top</a> -->
+    </div>
+
+</body>
+    
+<script type="text/javascript" src="../js/registration.js"></script>    
+<!-- <script type="text/javascript" src="../js/index.js"></script> -->
+<script type="text/javascript" src="../js/templates.js"></script>
